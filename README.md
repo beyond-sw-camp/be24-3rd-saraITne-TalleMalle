@@ -10,7 +10,7 @@
 
 > ### 🔗 Project Links
 > 🌐 **Web Service** : [TalleMalle 공식 서비스 접속하기](https://www.tallemalle.kro.kr)  
-> 📘 **API Docs** : [Swagger API 명세서](http://www.tallemalle.kro.kr:8080/swagger-ui/index.html#/call-controller/settlement)  
+> 📘 **API Docs** : [Swagger API 명세서](https://api.tallemalle.kro.kr/swagger-ui/index.html#/)  
 > 📏 **Convention** : [팀 코딩 컨벤션 및 규칙 (Notion)](https://www.notion.so/2dfa4b6b459480e693d3f1e81cf9134a?source=copy_link)
 
 <br>
