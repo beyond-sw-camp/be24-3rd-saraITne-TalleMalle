@@ -3,9 +3,6 @@
 <img width="280" alt="TalleMalle Logo" src="https://github.com/user-attachments/assets/3ae14639-49a6-415c-8407-bf0cb62fd85c" />
 
 # 🚕 TalleMalle Backend
-**실시간 위치 기반 동승 매칭 서비스 서버**
-
-*안정적인 API 설계와 실시간 통신 기반의 동승 매칭 서버*
 
 </div>
 
