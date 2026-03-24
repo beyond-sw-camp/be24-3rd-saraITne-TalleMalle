@@ -7,15 +7,14 @@
 
 *안정적인 API 설계와 실시간 통신 기반의 동승 매칭 서버*
 
+</div>
+
 <br>
 
-### 🔗 Project Links
-
-🌐 **Web Service** : [TalleMalle 공식 서비스 접속하기](https://www.tallemalle.kro.kr)<br>
-📘 **API Docs** : [Swagger](http://www.tallemalle.kro.kr/swagger-ui/index.html#/call-controller/settlement)<br>
-📏 **Convention** : [팀 코딩 컨벤션 및 규칙 (Notion)](https://www.notion.so/2dfa4b6b459480e693d3f1e81cf9134a?source=copy_link)
-
-</div>
+> ### 🔗 Project Links
+> 🌐 **Web Service** : [TalleMalle 공식 서비스 접속하기](https://www.tallemalle.kro.kr)  
+> 📘 **API Docs** : [Swagger API 명세서](http://www.tallemalle.kro.kr:8080/swagger-ui/index.html#/call-controller/settlement)  
+> 📏 **Convention** : [팀 코딩 컨벤션 및 규칙 (Notion)](https://www.notion.so/2dfa4b6b459480e693d3f1e81cf9134a?source=copy_link)
 
 <br>
 
@@ -83,6 +82,18 @@
 
 ---
 
+| 기술 스택 | 선정 이유 및 활용 방안 |
+| :--- | :--- |
+| **Java 17 / Spring Boot 3.5.10** | Java 17 LTS와 Spring Boot 3.x 기반으로 안정적인 런타임을 확보하고, 최신 스프링 생태계 기능(Security, JPA, Actuator 등)을 일관되게 사용 |
+| **Spring Security + JWT + OAuth2 Client** | 서버 세션 의존도를 낮춘 인증 구조를 위해 JWT(ATOKEN) 기반 인증을 적용하고, 소셜 로그인은 OAuth2 Client로 연동 |
+| **Spring Data JPA (Hibernate)** | 도메인 중심 개발 및 트랜잭션 관리를 단순화하고, Fetch Join/락 쿼리 등으로 성능·정합성 제어 |
+| **MariaDB (mariadb-java-client 3.4.1)** | 관계형 데이터 일관성과 트랜잭션 처리가 중요한 모집/참여/호출 도메인에 적합하여 채택 |
+| **WebSocket + STOMP** | 모집 상태 변경, 호출/운행 이벤트, 알림 등을 클라이언트에 실시간 반영하기 위해 사용 |
+| **Web Push (web-push 5.1.1)** | 브라우저 비활성 상태에서도 중요한 매칭/운행 알림을 전달하기 위해 도입 |
+| **AWS S3 (spring-cloud-aws-starter-s3 3.4.2)** | 프로필/첨부 파일을 애플리케이션 서버와 분리 저장해 배포·확장 시 안정적으로 파일 제공 |
+
+---
+
 ## 📚 Documents & Wiki
 
 > **프로젝트의 상세한 내용은 아래 Wiki 링크에서 확인하실 수 있습니다.**
@@ -116,14 +127,14 @@
 ### 🚖 시스템 및 기사 (System & Driver)
 5. **기사 배정 요청 (콜)**
    - 정원이 찼고 출발 예정 시각 전이라면, 서버가 **약 1분 주기**로 확인하여 "배정 요청" 상태로 전환합니다.
-   - 새 요청은 기사 앱 화면에 **실시간 알림(웹 소켓 통신)**으로 전달됩니다.
+   - 새 요청은 기사 앱 화면에 실시간 알림(웹 소켓 통신)으로 전달됩니다.
 6. **기사 앱 운행**
    - 기사 전용 계정으로 로그인 후, 배정 요청을 **수락**하고 `운행 시작` ➔ `운행 종료` 프로세스를 진행합니다.
 
 ### 💳 정산 및 알림 (Payment & Notification)
 7. **요금 정산 및 결제**
    - 운행이 끝나면 기사 앱에 N분의 1로 나뉜 예상 요금이 표시됩니다.
-   - 기사가 **"탑승객 결제하기"**를 누르면, 탑승객이 등록한 카드(**토스 결제**)로 각각 청구됩니다.
+   - 기사가 "탑승객 결제하기"를 누르면, 탑승객이 등록한 카드(**토스 결제**)로 각각 청구됩니다.
 8. **실시간 알림 전송**
    - 배정, 운행 시작, 결제 완료 등 주요 진행 상황은 앱 내 알림에 저장되며, 브라우저 **푸시(Push) 알림**으로도 발송됩니다.
 
