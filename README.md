@@ -59,11 +59,13 @@
 ![Spring Security](https://img.shields.io/badge/SpringSecurity-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white)
 ![JPA](https://img.shields.io/badge/JPA-Hibernate-59666C?style=for-the-badge)
 ![JWT](https://img.shields.io/badge/JWT-Auth-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white)
+![OAuth2](https://img.shields.io/badge/OAuth2-4285F4?style=for-the-badge&logo=oauth&logoColor=white)
 ![WebSocket](https://img.shields.io/badge/WebSocket-STOMP-00B894?style=for-the-badge)
 
-### DBMS
+### DBMS · 스토리지
 
 ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white)
+![AWS S3](https://img.shields.io/badge/AWS-S3-FF9900?style=for-the-badge&logo=amazons3&logoColor=white)
 
 ### Infra & Deployment
 
@@ -85,9 +87,10 @@
 <table width="100%">
   <thead>
     <tr>
-      <th width="33%" align="left">🌐 API Server</th>
-      <th width="33%" align="left">📘 API Docs</th>
-      <th width="33%" align="left">📏 Code Convention</th>
+      <th width="25%" align="left">🌐 API Server</th>
+      <th width="25%" align="left">🖥️ Web Service</th>
+      <th width="25%" align="left">📘 API Docs</th>
+      <th width="25%" align="left">📏 Code Convention</th>
     </tr>
   </thead>
   <tbody>
@@ -95,21 +98,28 @@
       <td valign="top">
         <p>
           <a href="https://api.bbsso.kro.kr:8080">
-            <img src="https://img.shields.io/badge/API-Server-blue?style=for-the-badge&logo=springboot&logoColor=white">
+            <img src="https://img.shields.io/badge/API-Server-blue?style=for-the-badge&logo=springboot&logoColor=white" alt="API Server">
+          </a>
+        </p>
+      </td>
+      <td valign="top">
+        <p>
+          <a href="https://www.tallemalle.kro.kr">
+            <img src="https://img.shields.io/badge/Web%20Service-42B883?style=for-the-badge&logo=vuedotjs&logoColor=white" alt="Web Service">
           </a>
         </p>
       </td>
       <td valign="top">
         <p>
           <a href="https://docs.google.com/spreadsheets/d/1iabBDvrhTMOP8ass_cav91xfmSoGrhqvT-ViAemRS54/edit?usp=sharing">
-            <img src="https://img.shields.io/badge/API-명세서-6DB33F?style=for-the-badge&logo=swagger&logoColor=white">
+            <img src="https://img.shields.io/badge/API-명세서-6DB33F?style=for-the-badge&logo=swagger&logoColor=white" alt="API 명세서">
           </a>
         </p>
       </td>
       <td valign="top">
         <p>
           <a href="https://www.notion.so/2dfa4b6b459480e693d3f1e81cf9134a?source=copy_link">
-            <img src="https://img.shields.io/badge/Code-Convention-111827?style=for-the-badge&logo=github&logoColor=white">
+            <img src="https://img.shields.io/badge/Code-Convention-111827?style=for-the-badge&logo=github&logoColor=white" alt="Code Convention">
           </a>
         </p>
       </td>
@@ -133,6 +143,12 @@
 - 확장 가능한 구조의 API 설계 필요
 
 ➡️ 이를 위해 Spring Boot 기반의 계층형 아키텍처로 서버를 설계했습니다.
+
+---
+
+# 🏗 서버 아키텍처
+
+![서버 아키텍처](https://github.com/user-attachments/assets/여기에-이미지-id-또는-URL)
 
 ---
 
@@ -193,31 +209,12 @@
 
 ### 🔄 서비스 흐름
 
-- Flow 1) 회원가입 → 로그인 → 모집 조회 → 참여 요청 → 승인 → 채팅  
-- Flow 2) 회원가입 → 로그인 → 모집 생성 → 참여자 모집 → 채팅  
-
----
-
-# 🏗 서버 아키텍처
-
-Client (Vue)
-
-↓
-
-Spring Boot (Controller)
-
-↓
-
-Service Layer (Business Logic)
-
-↓
-
-JPA Repository
-
-↓
-
-MariaDB
-
+| 구분 | 설명 |
+|:--:|--|
+| 승객 | 이메일·본인인증 후 로그인 → 모집 생성 또는 참여 → 정원이 차면 **FULL** |
+| 콜 | **FULL**이면서 시간이 지나면 스케줄러가 기사 호출 상태로 전환하고 **콜**이 생기며, 신규 콜은 **WebSocket(STOMP)** 으로 전파 |
+| 드라이버 | **DRIVER** 전용 가입·로그인 → 콜 수락 → 운행 → 완료(정산·이력). 수락·운행 시 승객 알림 |
+| 부가 | 모집 단위 채팅(STOMP), Web Push·인앱 알림, 토스 결제는 각 도메인 API |
 ---
 
 <div align="center">
