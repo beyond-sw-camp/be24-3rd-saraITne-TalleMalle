@@ -10,6 +10,7 @@
 
 > ### 🔗 Project Links
 > 🌐 **Web Service** : [TalleMalle 공식 서비스 접속하기](https://www.tallemalle.kro.kr)  
+> 🌐 **Web Driver Service** : [TalleMalle 공식 드라이버 서비스 접속하기](https://driver.tallemalle.kro.kr)   
 > 📘 **API Docs** : [Swagger API 명세서](http://www.tallemalle.kro.kr:8080/swagger-ui/index.html#/call-controller/settlement)  
 > 📏 **Convention** : [팀 코딩 컨벤션 및 규칙 (Notion)](https://www.notion.so/2dfa4b6b459480e693d3f1e81cf9134a?source=copy_link)
 
@@ -101,14 +102,16 @@
 * ✨ [**코딩 컨벤션 (Coding Convention)**](https://github.com/beyond-sw-camp/be24-3rd-saraITne-TalleMalle/wiki/4.-%EC%BD%94%EB%94%A9-%EC%BB%A8%EB%B2%A4%EC%85%98)
 * 🚀 [**성능 개선 (Performance Improvement)**](https://github.com/beyond-sw-camp/be24-3rd-saraITne-TalleMalle/wiki/6.-%EC%84%B1%EB%8A%A5-%EA%B0%9C%EC%84%A0-(Performance-Improvement)-%F0%9F%9A%80)
 
-<details>
-<summary><b>🖼️ ERD (Entity Relationship Diagram) 보기</b></summary>
-<div markdown="1">
 <br>
 
+🖼️ 시스템 아키텍처 (System Architecture)
+
+![Architecture](https://github.com/user-attachments/assets/da5ec654-da7c-4558-bf9a-4e34028f6565)
+
+
+🖼️ ERD (Entity Relationship Diagram)
+
 ![ERD](https://github.com/user-attachments/assets/e165850c-09ce-4e15-9e6a-f05455d937f9)
-</div>
-</details>
 
 ---
 
