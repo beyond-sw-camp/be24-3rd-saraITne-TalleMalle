@@ -102,13 +102,13 @@
 * ✨ [**코딩 컨벤션 (Coding Convention)**](https://github.com/beyond-sw-camp/be24-3rd-saraITne-TalleMalle/wiki/4.-%EC%BD%94%EB%94%A9-%EC%BB%A8%EB%B2%A4%EC%85%98)
 * 🚀 [**성능 개선 (Performance Improvement)**](https://github.com/beyond-sw-camp/be24-3rd-saraITne-TalleMalle/wiki/6.-%EC%84%B1%EB%8A%A5-%EA%B0%9C%EC%84%A0-(Performance-Improvement)-%F0%9F%9A%80)
 
-<br>
+<br></br>
 
 **🖼️ 시스템 아키텍처 (System Architecture)**
 
-<img src="https://github.com/user-attachments/assets/da5ec654-da7c-4558-bf9a-4e34028f6565" width="800"/>
+<img src="https://github.com/user-attachments/assets/ba83976b-a701-47f3-9568-ccf4f93c84c3" width="800"/>
 
-<br>
+<br></br>
 
 **🖼️ ERD (Entity Relationship Diagram)**
 
