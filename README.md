@@ -104,12 +104,13 @@
 
 <br>
 
-🖼️ 시스템 아키텍처 (System Architecture)
+**🖼️ 시스템 아키텍처 (System Architecture)**
 
 <img src="https://github.com/user-attachments/assets/da5ec654-da7c-4558-bf9a-4e34028f6565" width="800"/>
 
+<br>
 
-🖼️ ERD (Entity Relationship Diagram)
+**🖼️ ERD (Entity Relationship Diagram)**
 
 <img src="https://github.com/user-attachments/assets/e165850c-09ce-4e15-9e6a-f05455d937f9" width="800"/>
 
