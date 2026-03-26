@@ -105,8 +105,7 @@
 <br></br>
 
 **🖼️ 시스템 아키텍처 (System Architecture)**
-
-<img src="https://github.com/user-attachments/assets/ba83976b-a701-47f3-9568-ccf4f93c84c3" width="800"/>
+<img src="https://github.com/user-attachments/assets/1b1aad29-4229-4d2d-8223-16dc78243009" width="800"/>
 
 <br></br>
 
