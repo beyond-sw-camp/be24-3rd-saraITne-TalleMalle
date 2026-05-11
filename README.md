@@ -12,7 +12,8 @@
 > 🌐 **Web Service** : [TalleMalle 공식 서비스 접속하기](https://www.tallemalle.kro.kr)  
 > 🌐 **Web Driver Service** : [TalleMalle 공식 드라이버 서비스 접속하기](https://driver.tallemalle.kro.kr)   
 > 📘 **API Docs** : [Swagger API 명세서](https://api.tallemalle.kro.kr/swagger-ui/index.html)  
-> 📏 **Convention** : [팀 코딩 컨벤션 및 규칙 (Notion)](https://www.notion.so/2dfa4b6b459480e693d3f1e81cf9134a?source=copy_link)
+> 📏 **Convention** : [팀 코딩 컨벤션 및 규칙 (Notion)](https://www.notion.so/2dfa4b6b459480e693d3f1e81cf9134a?source=copy_link) <br>
+> 📜 **요구사항 명세서** : [요구사항 명세서](https://docs.google.com/spreadsheets/d/1_wSnuyYpkMXw1geaeSqGHfUOZfL644nFQrEA4qVqgvc/edit?usp=sharing)
 
 <br>
 
